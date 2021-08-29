@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import mystore.pageobjects.AuthenticationPage;
@@ -14,7 +15,7 @@ import mystore.pageobjects.YourAddressesPage;
 import utilities.AllureAttachment;
 
 public class UpdatesTests extends BaseTests {
-
+	@Owner("Meir Nehemkin")
 	@Test(description = "update address")
 	@Description("update address")
 	@Severity(SeverityLevel.CRITICAL)
@@ -36,6 +37,7 @@ public class UpdatesTests extends BaseTests {
 		myad.backToMyStorePage();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "update home phone number")
 	@Description("update home phone number")
 	@Severity(SeverityLevel.CRITICAL)
@@ -62,6 +64,7 @@ public class UpdatesTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "update mobile phone number")
 	@Description("update mobile phone number")
 	@Severity(SeverityLevel.CRITICAL)
@@ -89,6 +92,7 @@ public class UpdatesTests extends BaseTests {
 		myad.backToMyStorePage();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "add a new Address")
 	@Description("add a new Address")
 	@Severity(SeverityLevel.CRITICAL)
@@ -119,6 +123,7 @@ public class UpdatesTests extends BaseTests {
 		myad.backToMyStorePage();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "delete the address")
 	@Description("delete the address")
 	@Severity(SeverityLevel.CRITICAL)

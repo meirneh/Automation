@@ -1,3 +1,4 @@
+
 package mystore.tests;
 
 import org.testng.Assert;
@@ -5,6 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import mystore.pageobjects.AuthenticationPage;
@@ -14,8 +16,9 @@ import mystore.pageobjects.MyAccountPage;
 import mystore.pageobjects.MyStorePage;
 import utilities.AllureAttachment;
 
-public class loginTests extends BaseTests {
 
+public class loginTests extends BaseTests {
+	@Owner("Meir Nehemkin")
 	@Test(description = "Login to a New Account", enabled = true)
 	@Description("Login to a New Account")
 	@Severity(SeverityLevel.BLOCKER)
@@ -24,12 +27,12 @@ public class loginTests extends BaseTests {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.singIn();
 		AuthenticationPage ap = new AuthenticationPage(driver);
-		String newemail = "MeniPerez@gmail.com";
+		String newemail = "OmriPerez@gmail.com";
 		ap.createAnAccount(newemail);
 		CreateanAccountPage cap = new CreateanAccountPage(driver);
-		cap.fillPersonalInfo("Meni", "Perez", "12345", "22", "10", "1969");
+		cap.fillPersonalInfo("Omri", "Perez", "12345", "22", "10", "1969");
 		cap.fillPersonalAddress("Perez Company", " that Place 11", "that Place22", "Chicago", "13", "12345", "xxx");
-		cap.fillPhoneDetails("123321", "987654", "MNz Alias");
+		cap.fillPhoneDetails("123321", "987654", "Omz Alias");
 		cap.registerAccount();
 		MyAccountPage myap = new MyAccountPage(driver);
 		String expected = "Welcome to your account. Here you can manage all of your personal information and orders.";
@@ -39,6 +42,7 @@ public class loginTests extends BaseTests {
 		myap.returnToMyStorePage();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "check if display the name of the owner account")
 	@Description("check if display the name of the owner account")
 	@Severity(SeverityLevel.NORMAL)
@@ -56,6 +60,7 @@ public class loginTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "login a registered account")
 	@Description("login a registered account")
 	@Severity(SeverityLevel.CRITICAL)
@@ -75,6 +80,7 @@ public class loginTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "Login to a created account")
 	@Description("login a created account")
 	@Severity(SeverityLevel.BLOCKER)
@@ -93,6 +99,7 @@ public class loginTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "check the forgot your password feature")
 	@Description("check the forgot your password feature")
 	@Severity(SeverityLevel.CRITICAL)
@@ -113,6 +120,7 @@ public class loginTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "retrieve password with a not registered email address")
 	@Description("retrieve password with a not registered email address")
 	@Severity(SeverityLevel.CRITICAL)
@@ -133,6 +141,7 @@ public class loginTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(dataProvider = "getData", description = "incorrect login")
 	@Description("perform login with not valids and wrongs inputs values")
 	@Severity(SeverityLevel.BLOCKER)

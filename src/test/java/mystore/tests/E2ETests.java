@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import mystore.pageobjects.AddressesPage;
@@ -20,6 +21,7 @@ import utilities.AllureAttachment;
 
 public class E2ETests extends BaseTests {
 	// Perform login to the MyStore
+	@Owner("Meir Nehemkin")
 	@Test(description = "Perform Login ")
 	@Description("Perform Login")
 	@Severity(SeverityLevel.BLOCKER)
@@ -36,6 +38,7 @@ public class E2ETests extends BaseTests {
 		myap.returnToMyStorePage();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "choose a product from the Page Product")
 	@Description("choose a product from the Page Product")
 	@Severity(SeverityLevel.BLOCKER)
@@ -52,6 +55,7 @@ public class E2ETests extends BaseTests {
 		pp.toShoppingCart();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing to addresses page")
 	@Description("directing to addresses page")
 	@Severity(SeverityLevel.BLOCKER)
@@ -67,6 +71,7 @@ public class E2ETests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing to shipping page")
 	@Description("directing to shipping page")
 	@Severity(SeverityLevel.BLOCKER)
@@ -82,6 +87,7 @@ public class E2ETests extends BaseTests {
 		sp.toPayment();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing to choose payment page ", enabled = true)
 	@Description("directing to choose payment page")
 	@Severity(SeverityLevel.BLOCKER)
@@ -96,6 +102,7 @@ public class E2ETests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing to order summary page")
 	@Description("directing to order summary page")
 	@Severity(SeverityLevel.BLOCKER)
@@ -109,6 +116,7 @@ public class E2ETests extends BaseTests {
 		osp.confirmOrder();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing to order confirmation page")
 	@Description("directing to order confirmation page")
 	@Severity(SeverityLevel.BLOCKER)
@@ -123,6 +131,7 @@ public class E2ETests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing back to my store page")
 	@Description("directing back to my store page")
 	@Severity(SeverityLevel.BLOCKER)

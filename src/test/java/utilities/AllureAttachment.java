@@ -15,4 +15,6 @@ public class AllureAttachment {
 	 static byte[] attachScreenshot(WebDriver driver) {
 	  return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 	 }
+	
+	
 }

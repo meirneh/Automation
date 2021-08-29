@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import mystore.pageobjects.MyStorePage;
@@ -12,9 +13,10 @@ import mystore.pageobjects.ShoppingCartSummaryPage;
 import utilities.AllureAttachment;
 
 public class CartSummaryPageTests extends BaseTests {
-	@Severity(SeverityLevel.BLOCKER)
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing to shopping cart summary page")
 	@Description("directing to The Shopping Cart Summary Page")
+	@Severity(SeverityLevel.BLOCKER)
 	public void tc01DirectingToShoppingCartSummaryTest() {
 		AllureAttachment.attachText("Start test01");
 		MyStorePage mysp = new MyStorePage(driver);
@@ -32,6 +34,7 @@ public class CartSummaryPageTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "increase the quantity of the chosen product")
 	@Description("increase the quantity of the chosen product")
 	@Severity(SeverityLevel.NORMAL)
@@ -54,6 +57,7 @@ public class CartSummaryPageTests extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "decrease the quantity of the chosen product")
 	@Description("decrease the quantity of the chosen product")
 	@Severity(SeverityLevel.NORMAL)
@@ -76,6 +80,7 @@ public class CartSummaryPageTests extends BaseTests {
 		scsp.toMyStore();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "delete the chosen product")
 	@Description("delete the chosen product")
 	@Severity(SeverityLevel.CRITICAL)
@@ -95,6 +100,7 @@ public class CartSummaryPageTests extends BaseTests {
 		scsp.toMyStore();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "directing back to Product page by image of chosen product")
 	@Description("directing back to Product page by image of chosen product")
 	@Severity(SeverityLevel.MINOR)

@@ -4,6 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import mystore.pageobjects.MessagePage;
 import mystore.pageobjects.MyStorePage;
 import mystore.pageobjects.ProductPage;
@@ -12,8 +15,11 @@ import utilities.AllureAttachment;
 
 public class ProductPageTest extends BaseTests {
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "choose a product and add to cart ,close and back to product page")
 	@Description("choose a product and add to cart ,close and back to the Product page")
+	@Severity(SeverityLevel.CRITICAL)
+
 	public void tc01_ChooseProductAndAddToCart() {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Blouse");
@@ -28,8 +34,10 @@ public class ProductPageTest extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "choose and add to cart more than one product")
 	@Description("choose and add to cart more than one product")
+	@Severity(SeverityLevel.CRITICAL)
 	public void tc02_ChooseMoreThanOneProduct() {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Blouse");
@@ -47,8 +55,10 @@ public class ProductPageTest extends BaseTests {
 		pp.toMyStorePage();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "increase the quantity of chosen product")
 	@Description("increase the quantity of a chosen product")
+	@Severity(SeverityLevel.CRITICAL)
 	public void tc03_IncreaseQuantityProduct() {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Blouse");
@@ -62,8 +72,10 @@ public class ProductPageTest extends BaseTests {
 		pp.toMyStorePage();
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "decrease the quantity of chosen product")
 	@Description("decrease the quantity of a chosen product")
+	@Severity(SeverityLevel.CRITICAL)
 	public void tc04_DecreaseQuantityProduct() {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Blouse");
@@ -79,8 +91,10 @@ public class ProductPageTest extends BaseTests {
 
 	}
 
+	@Owner("Meir Nehemkin")
 	@Test(description = "send an email to a friend")
 	@Description("send an email to a friend")
+	@Severity(SeverityLevel.CRITICAL)
 	public void tc05_sendtoafriendfromChooseProduct() {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Blouse");
