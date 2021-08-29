@@ -24,12 +24,12 @@ public class loginTests extends BaseTests {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.singIn();
 		AuthenticationPage ap = new AuthenticationPage(driver);
-		String newemail = "EfiPerez@gmail.com";
+		String newemail = "MeniPerez@gmail.com";
 		ap.createAnAccount(newemail);
 		CreateanAccountPage cap = new CreateanAccountPage(driver);
-		cap.fillPersonalInfo("Efi", "Perez", "12345", "22", "10", "1969");
+		cap.fillPersonalInfo("Meni", "Perez", "12345", "22", "10", "1969");
 		cap.fillPersonalAddress("Perez Company", " that Place 11", "that Place22", "Chicago", "13", "12345", "xxx");
-		cap.fillPhoneDetails("123321", "987654", "EFz Alias");
+		cap.fillPhoneDetails("123321", "987654", "MNz Alias");
 		cap.registerAccount();
 		MyAccountPage myap = new MyAccountPage(driver);
 		String expected = "Welcome to your account. Here you can manage all of your personal information and orders.";
