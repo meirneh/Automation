@@ -13,7 +13,7 @@ import mystore.pageobjects.ProductPage;
 import mystore.pageobjects.SendtoaFriendPage;
 import utilities.AllureAttachment;
 
-public class ProductPageTest extends BaseTests {
+public class ProductPageTests extends BaseTests {
 
 	@Owner("Meir Nehemkin")
 	@Test(description = "choose a product and add to cart ,close and back to product page")

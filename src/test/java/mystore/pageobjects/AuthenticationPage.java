@@ -35,18 +35,23 @@ public class AuthenticationPage extends BasePage {
 	// Create Account
 	@Step("fill  email: {0}")
 	public void createAnAccount(String email) {
+		sleep(1000);
 		fillText(emailField, email);
-	explicitWaitClickable(createBtn);
+	//explicitWaitClickable(createBtn);
+		sleep(1000);
 		click(createBtn);
-		sleep(2500);
+		sleep(500);
 	}
 
 	// Registration with a Created Account
 	@Step("fill email: {0},fill password:{1}")
 	public void registeredCreatedAccount(String email, String psswd) {
+		sleep(1000);
 		fillText(EmailField, email);
+		sleep(500);
 		fillText(PasswordField, psswd);
-		explicitWaitClickable(signinBtn);
+		//explicitWaitClickable(signinBtn);
+		sleep(1000);
 		click(signinBtn);
 
 	}

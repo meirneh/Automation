@@ -45,7 +45,7 @@ public class ShoppingCartSummaryPage extends BasePage {
 
 	// Increase quantity of the chosen product
 	public void IncreaseQuantity() {
-	explicitWaitClickable(plusBtn);
+		explicitWaitClickable(plusBtn);
 		click(plusBtn);
 	}
 
@@ -73,7 +73,7 @@ public class ShoppingCartSummaryPage extends BasePage {
 
 	// Go to product page by image of chosen product
 	public void goToProdPageByImage() {
-	explicitWaitClickable(imgBtn);
+		explicitWaitClickable(imgBtn);
 		click(imgBtn);
 	}
 

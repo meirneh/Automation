@@ -10,9 +10,9 @@ public class CreateanAccountPage extends BasePage {
 
 	@FindBy(css = ".icon-home")
 	private WebElement returnhomeBtn;
-	@FindBy(css = "#uniform-id_gender1>span")
+	@FindBy(css = "#uniform-id_gender1")
 	private WebElement MrBtn;
-	@FindBy(css = "#uniform-id_gender2>span")
+	@FindBy(css = "#uniform-id_gender2")
 	private WebElement MrsBtn;
 	@FindBy(css = "#customer_firstname")
 	private WebElement firstnameField;
@@ -63,11 +63,14 @@ public class CreateanAccountPage extends BasePage {
 	// Fill personal information
 	@Step("fill firstname: {0},fill lastname:{1},fill password:{2},select day{3],select month{4},select year{5}")
 	public void fillPersonalInfo(String fname, String lname, String psswrd, String dnum, String mnum, String ynum) {
-		explicitWaitClickable(MrBtn);
+		//explicitWaitClickable(MrBtn);
+		sleep(500);
 		click(MrBtn);
 		sleep(3000);
 		fillText(firstnameField, fname);
+		sleep(500);
 		fillText(lastnameField, lname);
+		sleep(500);
 		fillText(passwordField, psswrd);
 		sleep(5000);
 		selectByValue(daySelect, dnum);
@@ -75,9 +78,11 @@ public class CreateanAccountPage extends BasePage {
 		selectByValue(monthSelect, mnum);
 		sleep(5000);
 		selectByValue(yearSelect, ynum);
-		explicitWaitClickable(nwsltrCbx);
+		//explicitWaitClickable(nwsltrCbx);
+		sleep(500);
 		click(nwsltrCbx);
-		explicitWaitClickable(spofertsCbx);
+		//explicitWaitClickable(spofertsCbx);
+		sleep(500);
 		click(spofertsCbx);
 	}
 

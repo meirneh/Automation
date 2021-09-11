@@ -13,10 +13,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-	WebDriver driver;
-	JavascriptExecutor js;
-	Actions actions;
-	WebDriverWait wait;
+	protected WebDriver driver;
+	private JavascriptExecutor js;
+	private Actions actions;
+	private WebDriverWait wait;
 	private int timeOutInSeconds;
 
 	public BasePage(WebDriver driver) {
@@ -29,10 +29,9 @@ public class BasePage {
 
 	public void fillText(WebElement el, String text) {
 		// highlight
-		// Use this line to give a web element style with border
+
 		// element is the WebElement that get the style
 
-		//js.executeScript("arguments[0].setAttribute('style', 'background -color:orange; border: 1px solid green;');",el);
 		el.clear();
 		el.sendKeys(text);
 	}
@@ -43,9 +42,9 @@ public class BasePage {
 	}
 
 	public String getText(WebElement el) {
-		//js.executeScript("arguments[0].setAttribute('style', 'background -color:blue; border: 1px solid orange;');",el);
+		// js.executeScript("arguments[0].setAttribute('style', 'background -color:blue;
+		// border: 1px solid orange;');",el);
 		return el.getText();
-
 	}
 
 	public String getAttribute(WebElement el) {
@@ -109,7 +108,8 @@ public class BasePage {
 	public void click(WebElement el) {
 		// log
 		// highlight
-		//js.executeScript("arguments[0].setAttribute('style', 'background -color:orange; border: 1px solid green;');",el);
+		// js.executeScript("arguments[0].setAttribute('style', 'background
+		// -color:orange; border: 1px solid green;');",el);
 		// explicitWaitClickable(el);
 		el.click();
 	}

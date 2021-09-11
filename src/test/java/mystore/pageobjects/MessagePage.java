@@ -8,7 +8,7 @@ public class MessagePage extends BasePage {
 
 	@FindBy(css = "[value='OK']")
 	private WebElement OKBtn;
-	@FindBy(css = ".fancybox-inner > p:nth-child(2)")
+	@FindBy(css = ".fancybox-opened p:nth-child(2)")
 	private WebElement successsendMsg;
 	public MessagePage(WebDriver driver) {
 		super(driver);

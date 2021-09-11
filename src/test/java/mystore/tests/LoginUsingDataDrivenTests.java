@@ -17,7 +17,7 @@ import mystore.pageobjects.MyStorePage;
 import utilities.AllureAttachment;
 
 
-public class loginTests extends BaseTests {
+public class LoginUsingDataDrivenTests extends BaseTests {
 	@Owner("Meir Nehemkin")
 	@Test(description = "Login to a New Account", enabled = true)
 	@Description("Login to a New Account")
@@ -27,12 +27,12 @@ public class loginTests extends BaseTests {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.singIn();
 		AuthenticationPage ap = new AuthenticationPage(driver);
-		String newemail = "OmriPerez@gmail.com";
+		String newemail = "DachyPerez@gmail.com";
 		ap.createAnAccount(newemail);
 		CreateanAccountPage cap = new CreateanAccountPage(driver);
-		cap.fillPersonalInfo("Omri", "Perez", "12345", "22", "10", "1969");
+		cap.fillPersonalInfo("Dachy", "Perez", "12345", "22", "10", "1969");
 		cap.fillPersonalAddress("Perez Company", " that Place 11", "that Place22", "Chicago", "13", "12345", "xxx");
-		cap.fillPhoneDetails("123321", "987654", "Omz Alias");
+		cap.fillPhoneDetails("123321", "987654", "Nchz Alias");
 		cap.registerAccount();
 		MyAccountPage myap = new MyAccountPage(driver);
 		String expected = "Welcome to your account. Here you can manage all of your personal information and orders.";
@@ -156,7 +156,7 @@ public class loginTests extends BaseTests {
 		AllureAttachment.attachText(actualError);
 		Assert.assertEquals(actualError, message);
 		ap.toMyStorePage();
-		//
+		
 	}
 
 	@DataProvider

@@ -44,22 +44,25 @@ public class ProductPage extends BasePage {
 
 	// Add quantity of the chosen product
 	public void addQuantity() {
-		explicitWaitClickable(plusBtn);
+		//explicitWaitClickable(plusBtn);
+		sleep(1000);
 		click(plusBtn);
 		// sleep(1000);
 	}
 
 	// Reduce quantity of the chosen product
 	public void reduceQuantity() {
-		explicitWaitClickable(minusBtn);
+		//explicitWaitClickable(minusBtn);
+		sleep(1000);
 		click(minusBtn);
 	}
 
 	// Click Add to cart Button
 	public void addToCart() {
-		explicitWaitClickable(addcartBtn);
+		// explicitWaitClickable(addcartBtn);
+		sleep(1000);
 		click(addcartBtn);
-		// sleep(500);
+		
 
 	}
 
@@ -72,14 +75,15 @@ public class ProductPage extends BasePage {
 
 	// Click continue shopping button
 	public void continueShopping() {
-		explicitWaitClickable(continueShoppingBtn);
+		//explicitWaitClickable(continueShoppingBtn);
+		sleep(1000);
 		click(continueShoppingBtn);
 	}
 
 	// Click send to friend button
 	public void sendToFriend() {
-		 sleep(1000);
-		//explicitWaitClickable(sentfriendBtn);
+		sleep(1000);
+		// explicitWaitClickable(sentfriendBtn);
 		click(sentfriendBtn);
 	}
 
@@ -121,7 +125,8 @@ public class ProductPage extends BasePage {
 		return getAttribute(quantityWindow);
 
 	}
-    //get the name of the product
+
+	// get the name of the product
 	public String getName() {
 		return getText(productTittle);
 	}
