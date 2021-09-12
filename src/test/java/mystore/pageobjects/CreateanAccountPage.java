@@ -64,7 +64,7 @@ public class CreateanAccountPage extends BasePage {
 	@Step("fill firstname: {0},fill lastname:{1},fill password:{2},select day{3],select month{4},select year{5}")
 	public void fillPersonalInfo(String fname, String lname, String psswrd, String dnum, String mnum, String ynum) {
 		//explicitWaitClickable(MrBtn);
-		sleep(500);
+		sleep(3000);
 		click(MrBtn);
 		sleep(3000);
 		fillText(firstnameField, fname);

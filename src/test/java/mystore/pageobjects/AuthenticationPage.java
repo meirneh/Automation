@@ -40,7 +40,7 @@ public class AuthenticationPage extends BasePage {
 	//explicitWaitClickable(createBtn);
 		sleep(1000);
 		click(createBtn);
-		sleep(500);
+		sleep(1000);
 	}
 
 	// Registration with a Created Account
@@ -74,6 +74,7 @@ public class AuthenticationPage extends BasePage {
 	// Validation
 	// Get Error Message about created account
 	public String getMsgAccCreatedError() {
+		sleep(2000);
 		return getInnerText(msgCreateAccError);
 	}
 

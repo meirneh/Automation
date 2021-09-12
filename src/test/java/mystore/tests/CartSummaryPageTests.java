@@ -42,6 +42,7 @@ public class CartSummaryPageTests extends BaseTests {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Printed Dress");
 		ProductPage pp = new ProductPage(driver);
+		pp.sleep(500);
 		pp.addToCart();
 		pp.toShoppingCart();
 		ShoppingCartSummaryPage scsp = new ShoppingCartSummaryPage(driver);
@@ -66,6 +67,7 @@ public class CartSummaryPageTests extends BaseTests {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Blouse");
 		ProductPage pp = new ProductPage(driver);
+		pp.sleep(500);
 		pp.addToCart();
 		pp.toShoppingCart();
 		ShoppingCartSummaryPage scsp = new ShoppingCartSummaryPage(driver);
@@ -89,6 +91,7 @@ public class CartSummaryPageTests extends BaseTests {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Printed Chiffon Dress");
 		ProductPage pp = new ProductPage(driver);
+		pp.sleep(500);
 		pp.addToCart();
 		pp.toShoppingCart();
 		ShoppingCartSummaryPage scsp = new ShoppingCartSummaryPage(driver);
@@ -108,6 +111,7 @@ public class CartSummaryPageTests extends BaseTests {
 		MyStorePage mysp = new MyStorePage(driver);
 		mysp.chooseProducts("Printed Chiffon Dress");
 		ProductPage pp = new ProductPage(driver);
+		pp.sleep(500);
 		pp.addToCart();
 		pp.toShoppingCart();
 		ShoppingCartSummaryPage scsp = new ShoppingCartSummaryPage(driver);

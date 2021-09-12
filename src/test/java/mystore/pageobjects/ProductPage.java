@@ -14,7 +14,7 @@ public class ProductPage extends BasePage {
 	private WebElement successaddMsg;
 	@FindBy(css = ".col-md-6 > h2 > span.ajax_cart_product_txt_s.unvisible")
 	private WebElement successMsgMoreThanOne;
-	@FindBy(css = ".button.exclusive-medium")
+	@FindBy(css = ".continue.btn.btn-default.button.exclusive-medium")
 	private WebElement continueShoppingBtn;
 	@FindBy(css = "#send_friend_button")
 	private WebElement sentfriendBtn;
@@ -60,8 +60,9 @@ public class ProductPage extends BasePage {
 	// Click Add to cart Button
 	public void addToCart() {
 		// explicitWaitClickable(addcartBtn);
-		sleep(1000);
+		sleep(2000);
 		click(addcartBtn);
+		sleep(2000);
 		
 
 	}
@@ -89,7 +90,7 @@ public class ProductPage extends BasePage {
 
 	// Close the addCartPage
 	public void closeAddCartPage() {
-		sleep(2000);
+		sleep(5000);
 		// explicitWaitClickable(closeXBtn);
 		click(closeXBtn);
 	}
